@@ -16,11 +16,13 @@ def on_message(client, userdata, msg):
 	state = x[1]
 	gpio = x[0]
 	
-	if state == 0:
+	if state == "0":
 		print(gpio + " OFF")
+		#LED(gpio).off
 
-	if state == 1:
+	if state == "1":
 		print(gpio + " ON")
+		#LED(gpio).on
 
    	#client.disconnect()
 
