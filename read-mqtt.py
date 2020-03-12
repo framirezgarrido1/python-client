@@ -11,7 +11,16 @@ def on_message(client, userdata, msg):
 	message = msg.payload.decode()
 	print("")
 	x = message.split("-")
-	print("id>"+ x[0] + " state>" + x[1])
+	print("id >"+ x[0] + " state>" + x[1])
+
+	state = x[1]
+	gpio = x[0]
+	
+	if state == 0:
+		print(gpio + " OFF")
+
+	if state == 1:
+		print(gpio + " ON")
 
    	#client.disconnect()
 
