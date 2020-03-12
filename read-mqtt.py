@@ -18,10 +18,13 @@ def on_message(client, userdata, msg):
 	
 	if state == "0":
 		print(gpio + " OFF")
+		response = "Update GPIO " + gpio
+		client.publish("devices/response/", response)
 		#LED(gpio).off
 
 	if state == "1":
 		print(gpio + " ON")
+		client.publish("devices/response/", response)
 		#LED(gpio).on
 
    	#client.disconnect()
