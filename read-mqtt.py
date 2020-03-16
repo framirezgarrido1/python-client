@@ -1,4 +1,7 @@
 import paho.mqtt.client as mqtt
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BOARD)
 
 # This is the Subscriber
 
@@ -11,10 +14,10 @@ def on_message(client, userdata, msg):
 	message = msg.payload.decode()
 	print("")
 	x = message.split("-")
-	print("id | "+ x[0] + " - state | " + x[1])
+	print("id | "+ x[0] + " - state | " + x[1]+ "type | "+ x[2])
 
-	state = x[1]
 	gpio = x[0]
+	state = x[1]
 	
 	if state == "0":
 		print(gpio + " OFF")
