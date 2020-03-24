@@ -9,12 +9,12 @@ response = requests.get('http://ec2-3-17-162-210.us-east-2.compute.amazonaws.com
 print response.content
 
 def rainactive(): 
-	response = requests.put('http://ec2-3-17-162-210.us-east-2.compute.amazonaws.com:3002/api/update/5e5574b3421a35568fe20657/0')
-    print('Rain Active')
+    response = requests.put('http://ec2-3-17-162-210.us-east-2.compute.amazonaws.com:3002/api/update/5e5574b3421a35568fe20657/0')
+    print("Rain Active")
 
 def raininactive(): 
-	response = requests.put('http://ec2-3-17-162-210.us-east-2.compute.amazonaws.com:3002/api/update/5e5574b3421a35568fe20657/1')
-    print('Rain Inactive')
+    response = requests.put('http://ec2-3-17-162-210.us-east-2.compute.amazonaws.com:3002/api/update/5e5574b3421a35568fe20657/1')
+    print("Rain Inactive")
 
 
 #Martes
@@ -25,13 +25,13 @@ schedule.every().tuesday.at("22:12").do(raininactive)
 schedule.every().thursday.at("22:10").do(rainactive)
 schedule.every().thursday.at("22:12").do(raininactive)
 
-#Sábado
+#Sabado
 schedule.every().saturday.at("22:10").do(rainactive)
 schedule.every().saturday.at("22:12").do(raininactive) 
 
 while True: 
 
-	# Checks whether a scheduled task 
-	# is pending to run or not 
-	schedule.run_pending() 
-	time.sleep(1) 
+    # Checks whether a scheduled task 
+    # is pending to run or not 
+    schedule.run_pending() 
+    time.sleep(1) 
