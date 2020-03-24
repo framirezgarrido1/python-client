@@ -10,13 +10,11 @@ print response.content
 
 def rainactive(): 
 	response = requests.put('http://ec2-3-17-162-210.us-east-2.compute.amazonaws.com:3002/api/update/5e5574b3421a35568fe20657/0')
-	if response.status_code == 200:
-    	print('Rain Active')
+    print('Rain Active')
 
 def raininactive(): 
 	response = requests.put('http://ec2-3-17-162-210.us-east-2.compute.amazonaws.com:3002/api/update/5e5574b3421a35568fe20657/1')
-	if response.status_code == 200:
-    	print('Rain Inactive')
+    print('Rain Inactive')
 
 
 #Martes
