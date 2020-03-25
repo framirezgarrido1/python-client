@@ -9,17 +9,17 @@ response = requests.get('http://ec2-3-17-162-210.us-east-2.compute.amazonaws.com
 print response.content
 
 def rainactive(): 
-    response = requests.put('http://ec2-3-17-162-210.us-east-2.compute.amazonaws.com:3002/api/update/5e5574b3421a35568fe20658/0')
+    requests.put('http://ec2-3-17-162-210.us-east-2.compute.amazonaws.com:3002/api/update/5e5574b3421a35568fe20658/0')
     print("Rain Active")
 
 def raininactive(): 
-    response = requests.put('http://ec2-3-17-162-210.us-east-2.compute.amazonaws.com:3002/api/update/5e5574b3421a35568fe20658/1')
+    requests.put('http://ec2-3-17-162-210.us-east-2.compute.amazonaws.com:3002/api/update/5e5574b3421a35568fe20658/1')
     print("Rain Inactive")
 
 
 #Martes
-schedule.every().tuesday.at("22:50").do(rainactive)
-schedule.every().tuesday.at("22:52").do(raininactive) 
+schedule.every().tuesday.at("22:56").do(rainactive)
+schedule.every().tuesday.at("22:57").do(raininactive) 
 
 #Jueves
 schedule.every().thursday.at("22:10").do(rainactive)
