@@ -20,16 +20,16 @@ def raininactive():
 
 
 #Martes
-schedule.every().tuesday.at("22:57").do(rainactive)
-schedule.every().tuesday.at("22:58").do(raininactive) 
+schedule.every().tuesday.at("22:00").do(rainactive)
+schedule.every().tuesday.at("22:02").do(raininactive) 
 
 #Jueves
-schedule.every().thursday.at("22:10").do(rainactive)
-schedule.every().thursday.at("22:12").do(raininactive)
+schedule.every().thursday.at("22:00").do(rainactive)
+schedule.every().thursday.at("22:02").do(raininactive)
 
 #Sabado
-schedule.every().saturday.at("22:10").do(rainactive)
-schedule.every().saturday.at("22:12").do(raininactive) 
+schedule.every().saturday.at("22:00").do(rainactive)
+schedule.every().saturday.at("22:02").do(raininactive) 
 
 while True: 
 
