@@ -4,6 +4,8 @@ import requests
 import schedule 
 import time 
 
+## representacion de la hora
+print "Hora " + time.strftime("%X")
 
 response = requests.get('http://ec2-3-17-162-210.us-east-2.compute.amazonaws.com:3002/api/devices') 
 print response.content
